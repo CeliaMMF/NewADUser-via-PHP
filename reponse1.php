@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         echo "Bonjour  $prenom $nom <br />";
         echo "votre session à bien été créé voici le login $login<br />";
         echo "Et voici votre mot de passe $mdp<br />";
-        echo Shell_Exec ('powershell.exe -executionPolicy bypass -File ".\NewADUser.ps1 '.$login.' '.$mdp.'"');
+        Shell_Exec ('powershell.exe -executionPolicy bypass -File ".\NewADUser.ps1 '.$login.' '.$mdp.'"');
         ?>
     </body>
     
