@@ -15,11 +15,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         $mdp = $_POST["mdp"];
         $login = $prenom . "." . $nom ;
         $login = strtolower($login);
+        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $login $mdp";
         // affichage
         echo "Bonjour  $prenom $nom <br />";
         echo "votre session à bien été créé voici le login $login<br />";
         echo "Et voici votre mot de passe $mdp<br />";
-        Shell_Exec ('powershell.exe -executionPolicy bypass -File ".\NewADUser.ps1 '.$login.' '.$mdp.'"');
+        Shell_Exec("$cmd");
         ?>
     </body>
     
