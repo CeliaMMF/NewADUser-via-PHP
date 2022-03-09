@@ -13,9 +13,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         $prenom = $_POST["prenom"];
         $nom = $_POST["nom"];
         $mdp = $_POST["mdp"];
+        $groupe = $_POST["groupe"];
         $login = $prenom . "." . $nom ;
         $login = strtolower($login);
-        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $login $mdp";
+        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $login $mdp $groupe";
         // affichage
         echo "Bonjour  $prenom $nom <br />";
         echo "votre session à bien été créé voici le login $login<br />";
