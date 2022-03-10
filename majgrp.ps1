@@ -1,1 +1,1 @@
-(Get-ADGroup -filter "*").Name | Out-File "groupe.txt"
+(Get-ADGroup -filter "*").Name | Out-File "groupe.txt" -Encoding utf8
