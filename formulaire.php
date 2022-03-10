@@ -11,6 +11,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta charset="UTF-8" />
     </head>
     <body>
+        <?php 
+        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"majgrp.ps1\"";
+        shell_exec($cmd);
+        ?>
         <section>
             <form action="reponse1.php" method="post"> 
                	<p>Entrez votre prénom :

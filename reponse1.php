@@ -1,13 +1,4 @@
-﻿<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
--->
-    <head>
-        <meta charset="UTF-8" />
-        <title>Récupération des saisies : reponse1.php</title>
-    </head>
-    <body>
+
         <?php
         // récupération des zones de saisie dans des variables locales
         $prenom = $_POST["prenom"];
@@ -22,6 +13,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
         echo "votre session à bien été créé voici le login $login, il fait parti du groupe $groupe<br />";
         echo "Et voici votre mot de passe $mdp<br />";
         Shell_Exec("$cmd");
-        ?>
-    </body>
+      
     
