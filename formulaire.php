@@ -19,7 +19,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <p>Entrez le groupe utilisateurs voulu :
     <?php 
     
-    $liste = file(groupe.txt);
+    $liste = file("groupe.txt");
     function Liste_deroulante($listeChoix, $name){
         $taille = count($listeChoix);
         $list = "<select name ='$name' size = '$taille' >";
