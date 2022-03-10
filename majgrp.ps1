@@ -1,0 +1,1 @@
+(Get-ADGroup -filter "*").Name | Out-File "groupe.txt"
