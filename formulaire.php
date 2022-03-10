@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!DOCTYPE html>
 <!--
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -22,8 +22,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     
     $liste = file("groupe.txt");
     function Liste_deroulante($listeChoix, $name){
-        $taille = count($listeChoix);
-        $list = "<select name ='$name' size = '$taille' >";
+        $list = "<select name ='$name'>";
         foreach($listeChoix as $valeur){
             $list .= "<option value='$valeur'>$valeur</option>";
         }
