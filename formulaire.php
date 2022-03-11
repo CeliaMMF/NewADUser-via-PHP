@@ -38,10 +38,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <p>Entrez votre mot de passe pour votre session (8 caractères dont 1 minuscule, 1 majuscule, 1 caractères spécial et 1 chiffre) :
        <input type="password" name="mdp" size="8" required /></p>
-        <p> Voulez vous que le mot de passe soit temporaire (changement au 1er login) ? <input type ="checkbox" name="mdptemp_oui" />
-        <input type ="checkbox" name="mdptemp_non" />Oui</p>
-    <?php 
-    $mdptemp = $_POST["mdptemp"]; ?>
+        <!--<p> Voulez vous que le mot de passe soit temporaire (changement au 1er login) ? <input type ="checkbox" name="mdptemp_oui" />
+        <input type ="checkbox" name="mdptemp_non" />Oui</p> -->
         <input type="submit" value="Envoyer" />
         <input type="reset" value="Annuler" />
             </form>
