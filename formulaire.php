@@ -21,7 +21,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <input type="text" name="prenom" size="20" required /></p>
     <p>Entrez votre nom :
         <input type="text" name="nom" size="20" required /></p>
-    <p>Entrez le groupe utilisateurs voulu :
+    <p>Choisissez le groupe utilisateurs voulu :
     <?php 
     
     $liste = file("groupe.txt");
@@ -38,7 +38,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         
         <p>Entrez votre mot de passe pour votre session (8 caractères dont 1 minuscule, 1 majuscule, 1 caractères spécial et 1 chiffre) :
        <input type="password" name="mdp" size="8" required /></p>
-        <p> Voulez que le mot de passe soit temporaire (changement au 1er login) ? <input type ="checkbox" name="mdptemp" /></p>
+        <p> Voulez vous que le mot de passe soit temporaire (changement au 1er login) ? <input type ="checkbox" name="mdptemp" /></p>
     <?php 
     $mdptemp = $_POST["mdptemp"]; ?>
         <input type="submit" value="Envoyer" />
