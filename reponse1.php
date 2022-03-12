@@ -7,7 +7,7 @@
         $groupe = $_POST["groupe"];
         $login = $prenom . "." . $nom ;
         $login = strtolower($login);
-        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $login $mdp $groupe $nom $prenom";
+        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe";
         // affichage
         echo "Bonjour  $prenom $nom <br />";
         echo "votre session à bien été créé voici le login $login, il fait parti du groupe $groupe<br />";

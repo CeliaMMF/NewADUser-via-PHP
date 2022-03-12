@@ -1,8 +1,8 @@
-$login = $args[0]
-$mdp = $args[1]
-$groupe = $args[2]
-$nom = $args[3]
-$prenom = $args[4]
+$login = $args[2]
+$mdp = $args[3]
+$groupe = $args[4]
+$nom = $args[0]
+$prenom = $args[1]
 $mdp_temp = ConvertTo-SecureString ($mdp) -Force -AsPlainText
 New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true
 Add-ADGroupMember -Identity $groupe -Members $login
