@@ -11,6 +11,9 @@
         if(isset($_POST["mdptemp"])){
                 $mdp_unique = "unique";
         }
+        else{
+                $mdp_unique = "valide";
+        }
         $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
         // affichage
         echo "Bonjour  $prenom $nom <br />";
