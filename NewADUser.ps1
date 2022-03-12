@@ -3,7 +3,7 @@ $mdp = $args[3]
 $groupe = $args[4]
 $nom = $args[0]
 $prenom = $args[1]
-$mdp_unique = $true
+$mdp_unique = $args[5]
 $mdp_temp = ConvertTo-SecureString ($mdp) -Force -AsPlainText
 if (!$mdp_unique){
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true

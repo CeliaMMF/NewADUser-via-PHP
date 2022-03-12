@@ -7,6 +7,9 @@
         $groupe = $_POST["groupe"];
         $login = $prenom . "." . $nom ;
         $login = strtolower($login);
+        if(isset($_POST["mdptemp"])){
+                
+        }
         $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe";
         // affichage
         echo "Bonjour  $prenom $nom <br />";
