@@ -8,8 +8,8 @@
         $login = $prenom . "." . $nom ;
         $login = strtolower($login);
         if(isset($_POST["mdptemp"])){
-                $mdp_unique = $false
-        }
+                $mdp_unique = $true
+        };
         // $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
         // affichage
         echo $mdp_unique;
