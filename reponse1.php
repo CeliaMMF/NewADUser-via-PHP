@@ -9,11 +9,13 @@
         $login = strtolower($login);
         if(isset($_POST["mdptemp"])){
                 $mdp_unique = "unique";
-                $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
+                //$cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
+                        echo "Coché"
         }
         else{
                 $mdp_unique = "valide";
                 $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe";
+                echo "Pas coché"
         }
         // affichage
         echo "Bonjour  $prenom $nom <br />";

@@ -5,11 +5,11 @@ $nom = $args[0]
 $prenom = $args[1]
 $mdp_unique = $args[5]
 $mdp_temp = ConvertTo-SecureString ($mdp) -Force -AsPlainText
-if ($mdp_unique -eq "unique"){
+if (!$mdp_unique){
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true
     echo "Le mot de passe n'est pas unique"
 }
-elseif ($mdp_unique -eq "valide"){
+else{
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true -ChangePasswordAtLogon $true
     echo "Le mot de passe est unique"
 }
