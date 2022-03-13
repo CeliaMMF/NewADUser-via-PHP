@@ -19,6 +19,6 @@
         echo "Bonjour  $prenom $nom <br />";
         echo "votre session à bien été créé voici le login $login, il fait parti du groupe $groupe<br />";
         echo "Et voici votre mot de passe $mdp<br />" ;
-        Shell_Exec("$cmd");
+        Shell_Exec("echo 'shell exec'");
       
     
