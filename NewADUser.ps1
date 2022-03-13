@@ -9,7 +9,7 @@ if ($mdp_unique -eq "unique"){
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true
     Write-Output "Le mot de passe n'est pas unique"
 }
-if ($mdp_unique -eq "valide"){
+elseif ($mdp_unique -eq "valide"){
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true -ChangePasswordAtLogon $true
     Write-Output "Le mot de passe est unique"
 }
