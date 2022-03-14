@@ -7,12 +7,12 @@ $prenom = $args[1]
 $mdp_temp = ConvertTo-SecureString ($mdp) -Force -AsPlainText
 if ($mdp_unique -eq $false){
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true
-    echo "Le mot de passe n'est pas unique"
+    Write-Output "Le mot de passe n'est pas unique"
 }
 elseif($mdp_unique -eq $true) {
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true -ChangePasswordAtLogon $true
-    echo "Le mot de passe est unique"
+    Write-Output "Le mot de passe est unique"
 }
 Add-ADGroupMember -Identity $groupe -Members $login
-echo "Le login de votre compte est :" $login
-echo "Il appartient au groupe :" $groupe
+Write-Output "Le login de votre compte est :" $login
+Write-Output "Il appartient au groupe :" $groupe

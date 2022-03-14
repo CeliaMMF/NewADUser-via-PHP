@@ -5,7 +5,7 @@
         $nom = $_POST["nom"];
         $mdp = $_POST["mdp"];
         $groupe = $_POST["groupe"];
-        $login = $prenom . "." . $nom ;
+        $login = $nom . "." . $prenom ;
         $login = strtolower($login);
         if(isset($_POST["mdptemp"])){
                 $mdp_unique = true;
