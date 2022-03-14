@@ -8,20 +8,16 @@
         $login = $prenom . "." . $nom ;
         $login = strtolower($login);
         if(isset($_POST["mdptemp"])){
-                $mdp_unique = "unique";
-                //$cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
-                echo "Coché"
+                $mdp_unique = true;
         }
         else{
-                $mdp_unique = "valide";
-                $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe";
-                echo "Pas coché"
+                $mdp_unique = false;
         }
         // affichage
+        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
         echo "Bonjour  $prenom $nom <br />";
         echo "votre session à bien été créé voici le login $login, il fait parti du groupe $groupe<br />";
         echo "Et voici votre mot de passe $mdp<br />" ;
-        echo $cmd;
-        //Shell_Exec("echo 'shell exec'");
+        Shell_Exec("$cmd");
       
     

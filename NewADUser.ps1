@@ -3,13 +3,13 @@ $mdp = $args[3]
 $groupe = $args[4]
 $nom = $args[0]
 $prenom = $args[1]
-$mdp_unique = $args[5]
+[bool]$mdp_unique = $args[5]
 $mdp_temp = ConvertTo-SecureString ($mdp) -Force -AsPlainText
-if (!$mdp_unique){
+if ($mdp_unique -eq $false){
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true
     echo "Le mot de passe n'est pas unique"
 }
-else{
+elseif($mdp_unique -eq $true) {
     New-ADUser -Name "$nom" -Surname "$prenom" -SamAccountName "$login" -AccountPassword $mdp_temp -Enabled $true -ChangePasswordAtLogon $true
     echo "Le mot de passe est unique"
 }
