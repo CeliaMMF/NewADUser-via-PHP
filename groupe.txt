@@ -52,3 +52,4 @@ Partage autorisé
 Partage intérdit
 test
 wsh
+GLPI_GROUPE
