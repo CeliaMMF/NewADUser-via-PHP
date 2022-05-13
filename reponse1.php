@@ -7,14 +7,8 @@
         $groupe = $_POST["groupe"];
         $login = $nom . "." . $prenom ;
         $login = strtolower($login);
-        if(isset($_POST["mdptemp"])){
-                $mdp_unique = (bool) true;
-        }
-        else{
-                $mdp_unique = (bool) false;
-        }
         // affichage
-        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe $mdp_unique";
+        $cmd = "powershell.exe -ExecutionPolicy Bypass -NoProfile -File \"NewADUser.ps1\" $nom $prenom $login $mdp $groupe";
         echo $cmd;
         // $output = Shell_Exec("$cmd");
         // echo $output;

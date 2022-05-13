@@ -1,0 +1,57 @@
+﻿**********************
+Début de la transcription Windows PowerShell
+Heure de début : 20220513110239
+Nom d'utilisateur : XION\Administrateur
+Utilisateur runAs :  XION\Administrateur
+Nom de la configuration : 
+Ordinateur : CGA-SRV-DC (Microsoft Windows NT 10.0.17763.0)
+Application hôte : C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\Administrateur\.vscode\extensions\ms-vscode.powershell-2022.5.1\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2022.5.1' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\Administrateur\.vscode\extensions\ms-vscode.powershell-2022.5.1\modules' -EnableConsoleRepl -StartupBanner '=====> PowerShell Integrated Console v2022.5.1 <=====
+' -LogLevel 'Normal' -LogPath 'c:\Users\Administrateur\.vscode\extensions\ms-vscode.powershell-2022.5.1\logs\1652431483-f955a1fa-655e-495b-8ace-bee7901425211652431477089\EditorServices.log' -SessionDetailsPath 'c:\Users\Administrateur\.vscode\extensions\ms-vscode.powershell-2022.5.1\sessions\PSES-VSCode-8552-177649' -FeatureFlags @() 
+ID de processus : 3268
+PSVersion: 5.1.17763.1007
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.1007
+BuildVersion: 10.0.17763.1007
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcription démarrée, le fichier de sortie est .\logs\log.rtf
+PS C:\xampp\htdocs\NewADUser-via-PHP> Erreur de terminaison (New-ADUser) : « Impossible de lier le paramètre « AccountPassword ». Impossible de convertir la valeur « Laurine_3108 » du type « System.String » en type « System.Security.SecureString ». »
+New-ADUser : Impossible de lier le paramètre «AccountPassword». Impossible de convertir la valeur «Laurine_3108» du 
+type «System.String» en type «System.Security.SecureString».
+Au caractère C:\xampp\htdocs\NewADUser-via-PHP\NewADUser.ps1:7 : 86
++ ... name "$prenom" -SamAccountName "$login" -AccountPassword $mdp -Enable ...
++                                                              ~~~~
+    + CategoryInfo          : InvalidArgument : (:) [New-ADUser], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+New-ADUser : Impossible de lier le paramètre «AccountPassword». Impossible de convertir la valeur «Laurine_3108» du type «System.String» en type «
+System.Security.SecureString».
+Au caractère C:\xampp\htdocs\NewADUser-via-PHP\NewADUser.ps1:7 : 86
++ ... name "$prenom" -SamAccountName "$login" -AccountPassword $mdp -Enable ...
++                                                              ~~~~
+    + CategoryInfo          : InvalidArgument : (:) [New-ADUser], ParameterBindingException
+    + FullyQualifiedErrorId : CannotConvertArgumentNoMessage,Microsoft.ActiveDirectory.Management.Commands.NewADUser
+
+>> Erreur de terminaison (Add-ADGroupMember) : « Impossible de trouver un objet avec l’identité « corentin.gallard » sous : « DC=xion,DC=xiii ». »
+Add-ADGroupMember : Impossible de trouver un objet avec l’identité « corentin.gallard » sous : « DC=xion,DC=xiii ».
+Au caractère C:\xampp\htdocs\NewADUser-via-PHP\NewADUser.ps1:8 : 1
++ Add-ADGroupMember -Identity $groupe -Members $login
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (corentin.gallard:ADPrincipal) [Add-ADGroupMember], 
+ADIdentityNotFoundException
+    + FullyQualifiedErrorId : 
+SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+Add-ADGroupMember : Impossible de trouver un objet avec l’identité « corentin.gallard » sous : « DC=xion,DC=xiii ».
+Au caractère C:\xampp\htdocs\NewADUser-via-PHP\NewADUser.ps1:8 : 1
++ Add-ADGroupMember -Identity $groupe -Members $login
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (corentin.gallard:ADPrincipal) [Add-ADGroupMember], ADIdentityNotFoundException
+    + FullyQualifiedErrorId : SetADGroupMember.ValidateMembersParameter,Microsoft.ActiveDirectory.Management.Commands.AddADGroupMember
+
+Le login de votre compte est :
+corentin.gallard
+Il appartient au groupe :
+GLPI_GROUPE
+Test
