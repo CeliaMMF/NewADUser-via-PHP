@@ -1,4 +1,3 @@
-start-transcript -path ".\logs\log.rtf"
 $login = $args[2]
 $mdp = $args[3]
 $groupe = $args[4]
